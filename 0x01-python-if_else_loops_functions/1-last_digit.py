@@ -8,13 +8,13 @@ if number >= 0:
 else:
     check_n = number * -1
 
-# get the last digit of a number
+# get the last last_d of a number
 last_d = check_n % 10
 
-# check the given conditions
+print(f"Last last_d of {number:d} is {last_d:d} and is ", end="")
 if last_d > 5:
-    print(f"Last digit of {number} is {last_d} and is greater than 5")
+    print("greater than 5")
 elif last_d == 0:
-    print(f"Last digit of {number} is {last_d} and is 0")
+    print("0")
 else:
-    print(f"Last digit of {number} is {last_d} and is less than 6 and not 0")
+    print("less than 6 and not 0")
