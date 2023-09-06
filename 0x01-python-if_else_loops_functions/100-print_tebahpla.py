@@ -6,4 +6,4 @@ for i in range(ord('z'), ord('a') - 1, -1):
     else:
         output += chr(i).upper()
 
-print(output)
+print("{}".format(output), end="")
