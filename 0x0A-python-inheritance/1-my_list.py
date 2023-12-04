@@ -11,6 +11,10 @@ class MyList(list):
     A custom class that extends the built-in 'list' class.
 
     """
+    def __init__(self):
+        """initializes the object"""
+        super().__init__()
+
     def print_sorted(self):
         """
         Prints the elements of the list in sorted order.
