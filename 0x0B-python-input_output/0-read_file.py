@@ -12,7 +12,6 @@ def read_file(filename=""):
     in which case the function reads a file named 'my_file_0.txt'.
     """
 
-    with open(filename, 'r') as f:
-        for line in f:
-            print(line, end='')
-    print()
+    with open(filename, 'r', encoding="utf-8") as f:
+        f_content = f.read()
+        print(f_content, end='')
