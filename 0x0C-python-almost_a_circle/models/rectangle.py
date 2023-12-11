@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 Module that defines a class Rectangle, which inherits from the Base class.
-
 """
 
 from models.base import Base
@@ -94,3 +93,11 @@ class Rectangle(Base):
     def area(self):
         """returns the area value of the Rectangle instance."""
         return self.width * self.height
+
+    def display(self):
+        """
+        Displays the rectangle by printing it
+        to stdout using the character '#'.
+        """
+        for _ in range(self.__height):
+            print("#" * self.__width)
