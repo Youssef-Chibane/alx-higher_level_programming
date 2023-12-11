@@ -108,3 +108,29 @@ class Rectangle(Base):
         """Return the print() and str() representation of the Rectangle."""
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """
+        Assigns arguments to attributes in the following order:
+        1st argument: id attribute
+        2nd argument: width attribute
+        3rd argument: height attribute
+        4th argument: x attribute
+        5th argument: y attribute
+
+        If **kwargs is provided, updates attributes using key-value pairs.
+        """
+        if len(args) > 0:
+            self.id = args[0]
+        if len(args) > 1:
+            self.width = args[1]
+        if len(args) > 2:
+            self.height = args[2]
+        if len(args) > 3:
+            self.x = args[3]
+        if len(args) > 4:
+            self.y = args[4]
+
+        # Process keyword arguments (**kwargs)
+        for key, value in kwargs.items():
+            setattr(self, key, value)
